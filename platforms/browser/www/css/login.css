@@ -1,0 +1,343 @@
+/********** INDEX *********************/
+body{
+    background: url("../img/background.jpg") no-repeat center center fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -khtml-opacity: .50;
+    background-size: 100% 100%;
+}
+.mdl-layout__container{
+    height: 120px;
+}
+
+a, a:visited, a:hover, a:focus{
+    font-size: 12px;
+    text-decoration: none !important;
+}
+
+.js-draft{
+    display: none;
+}
+.titulo{
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+.ventana{
+    margin-top: 17vh;
+}
+#feedBack{
+    background-color: #f44336;
+}
+.js-contenido{
+    padding: 8vh 0vh;
+}
+/********** navBar *********************/
+header{
+    white-space: nowrap;
+}
+.mdl-menu__container {
+    right: 10px !important;
+}
+#navBar{
+    display: none;
+}
+.mdl-layout__header-row{
+    padding-left: 10px;
+}
+nav {
+    width:100%;
+}
+.search:focus {
+    outline: none !important;
+    border:0px 0px 1px 0px solid black;
+    box-shadow: 0 0 0px;
+}
+.img {
+    height: 50px;
+    width: 50px;
+    background-image: url("http://localhost:8000/img/users/default.png");
+    background-size: 50px 50px;
+    border-radius:50%;
+    float: right;
+}
+.buscarMovil {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 3.5%;
+    margin-right: 3.5%;
+}
+.buscarPC {
+    visibility: hidden;
+}
+.botonEmp .float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    z-index:1000;
+    animation: bot-to-top 2s ease-out;
+}
+.botonEmp ul{
+    position:fixed;
+    right:40px;
+    padding-bottom:20px;
+    bottom:80px;
+    z-index:100;
+}
+.botonEmp ul li{
+    list-style:none;
+    margin-bottom:10px;
+}
+.botonEmp ul li a{
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    width:60px;
+    height:60px;
+    display:block;
+}
+.botonEmp button{
+    background-color: #607d8b;
+    color: white;
+}
+.mdl-button:hover{
+    background-color: #607d8b;
+}
+.botonEmp .my-float{
+    font-size:24px;
+    margin-top:18px;
+}
+.botonEmp a#menu-empresa + ul{
+    visibility: hidden;
+}
+/********** login *********************/
+.ui-slider{
+    margin-bottom: 20px;
+}
+.ui-slider-range{
+    background-color: rgb(0, 167, 186);
+}
+#login .mdl-button, #registro .mdl-button, #perfil button, #createOferta button, #remember button, #createCalendar button, #oferta button{
+    padding-left: 40%;
+    padding-right: 40%;
+    background-color: #30a7ba;
+    color: white;
+    margin-top: 20px;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+.volver{
+    margin: 20px 10px -35px 10px;
+}
+.card-me {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+#login .mdl-cell--12-col , #registro .mdl-cell--12-col, #perfil .mdl-cell--12-col, #faqs .mdl-cell--12-col, #remember .mdl-cell--12-col{
+    display: flex;
+    justify-content: center;
+}
+.login-box {
+    text-align: center;
+    letter-spacing: 1px;
+    position: relative;
+}
+.loginArchors a{
+    color: #00bacf;
+    margin-bottom: 30px;
+}
+.btn, .input-group-btn .btn {
+    border: none;
+    border-radius: 2px;
+    position: relative;
+    padding: 8px 30px;
+    margin: 10px 1px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    will-change: box-shadow,transform;
+    -webkit-transition: -webkit-box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    -o-transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
+    outline: 0;
+    cursor: pointer;
+    text-decoration: none;
+    background: 0 0;
+}
+/********** dialog *********************/
+.mdl-dialog button{
+    background-color: #30a7ba;
+    color: white;
+    margin-top: 20px;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+/********** cards *********************/
+
+.demo-card-wide.mdl-card {
+    width: 512px;
+}
+.producto{
+    position: relative;
+}
+.demo-card-wide>.mdl-card__title {
+    font-weight: bolder;
+    color: #fff;
+    height: 176px;
+    background: rgba(0, 0, 0, .5) url('http://www.europaperu.org/wp-content/themes/p-blog-theme/assets/images/No-image-full.jpg') center / cover;
+}
+.demo-card-wide>.mdl-card__menu {
+    color: #fff;
+}
+.precio {
+    background-color: #30a7ba;
+    float: right;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-radius: 15px 0 15px 0;
+    font-weight: bolder;
+}
+.pre {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+.serv {
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+}
+h6{
+    margin: 10px 0;
+}
+.cardBackground {
+    text-align: center;
+    filter: blur(6px);
+}
+.cardImg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5%;
+    height: 150px;
+    width: 150px;
+    background: url("http://www.europaperu.org/wp-content/themes/p-blog-theme/assets/images/No-image-full.jpg") no-repeat center;
+    margin: 0px auto;
+}
+.fechaIni {
+    font-weight: bolder;
+    float: left;
+    background-color: #30a7ba;
+    width: 35%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-radius: 0 15px 0 15px;
+}
+/**** servicio ****/
+.servicio {
+    width: 95%;
+    margin-left:2.5%;
+    background-color:white;
+    padding:50px;
+    border-radius: 50px;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img {
+    width: 100%;
+    height: 350px;
+}
+.imagenes {
+    border-radius: 100% 0 0 0;
+}
+.carousel-control {
+    opacity:0;
+}
+.carousel-control:hover {
+    opacity:0;
+}
+.item img{
+   border-radius: 30px;
+}
+.carousel-control.right {
+    background: none;
+}
+.carousel-control.left {
+    background: none;
+}
+
+/************ Create oferta *********************/
+#createOferta .mdl-textfield, #createOferta .default_img, #createOferta img, #btn-crear{
+   width: 100%;
+}
+
+/************ Perfil *********************/
+.profilePicture {
+    height: 100%;
+    width: 100%;
+    background-image: url("http://localhost:8000/img/users/default.png");
+    background-size: 100% 100%;
+}
+
+/************ Crear calendario ********************/ 
+#horario td, #horario th { 
+    text-align: center; 
+}
+
+@media only screen and (min-width: 768px) {
+    .buscarMovil {
+       display: none;
+   }
+   .buscarPC{
+       visibility: visible;
+   }
+   .botonEmp{
+       display: none;
+   }
+   .card-me, .mdl-dialog{
+       width: 580px;
+   }
+   .mdl-textfield{
+       width: 600px;
+   }
+   .mdl-menu__container {
+       right: 80px !important;
+   }
+   .js-contenido{
+       padding: 8vh;
+   }
+
+   .carousel-inner>.item>a>img, .carousel-inner>.item>img {
+       width: 100%;
+       height: 700px;
+   }
+
+   .truncate{
+    min-height: 66px;
+    }
+}
+
+#calendario-view td{
+    width: 100px;
+}
+
+#calendario-view th, #calendario-view td{
+    text-align: center;
+}
+
+.closed {
+   border: 0.5px solid white; 
+   background-color: #6f8994;
+   width: 100px;
+}
+.opened {
+   width: 100px;
+   border: 0.5px solid white; 
+   background-color: #55d037;
+}
