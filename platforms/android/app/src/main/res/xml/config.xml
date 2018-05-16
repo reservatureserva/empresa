@@ -37,10 +37,10 @@
     </feature>
     <name>Reservatureserva-empresa</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Aplicacion de reservatureserva para empresas
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="reservatureserva@gmail.com" href="http://reservatureserva.ddns.net">
+        RTR Team
     </author>
     <content src="index.html" />
     <access origin="*" />

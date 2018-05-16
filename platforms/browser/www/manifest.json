@@ -4,8 +4,8 @@
   "name": "Reservatureserva-empresa",
   "short_name": "Reservatureserva-empresa",
   "version": "com.gmail.reservatureserva",
-  "description": "Hello World sample application that responds to the deviceready event.",
-  "author": "PhoneGap Team",
+  "description": "Aplicacion de reservatureserva para empresas",
+  "author": "RTR Team",
   "icons": [],
   "start_url": "index.html"
 }
