@@ -1,6 +1,6 @@
 var perfilCo = (function() {
 	var ini = ()=>{
-		var user = cookies.getJsonFromCookie(utils.userCookieName);
+		var user = cookies.getJsonFromCookie(utils.businessCookieName);
 		createPerfil(user);
 		//Cambia los datos de un usuario
 		$('#btn-guardar').click(function() {
@@ -33,7 +33,7 @@ var perfilCo = (function() {
 				cookies.deleteCookie(utils.imageCookieName);
 			}
 
-			peticionesAJAX.updateUser(json, contenido.perfil);			
+			peticionesAJAX.updateBusiness(json, contenido.perfil);			
 		}
 	};
 
@@ -43,8 +43,9 @@ var perfilCo = (function() {
 		$(form).find("input[name='email']").val(json.email);
 		$(form).find("input[name='cif']").val(json.cif);
 		$(form).find("input[name='tlfn']").val(json.tlf);
+		$(form).find("input[name='nreservas']").val(json.nReservas);
 		if(json.foto_perfil != undefined && json.foto_perfil != ""){
-			$('.profilePicture').css('background-image','url(http://localhost:8000/' + json.foto_perfil + ')');			
+			$('.profilePicture').css('background-image','url('+utils.servidorURL + json.foto_perfil + ')');			
 		}
 
 	};

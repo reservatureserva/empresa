@@ -1,6 +1,5 @@
 var utils = (function() {
-	const userCookieName = "userLoggedData";
-	const bussinessCookieName = "bussinessLoggedData";
+	const businessCookieName = "businessLoggedData";
 	const imageCookieName = "imageBase";
 	const ofertaTmp = "ofertaTmp";
 	const calendarTmp = "calendarTmp";
@@ -180,8 +179,7 @@ var utils = (function() {
 		getMonday		: 	getMonday,
 		encode64 		: 	encode64,
 		decode64		: 	decode64,
-		userCookieName  : 	userCookieName,
-		bussinessCookieName : bussinessCookieName,
+		businessCookieName : businessCookieName,
 		imgToBase64		: 	imgToBase64,
 		imageCookieName : 	imageCookieName,
 		ddMMYYYYtoEpoc 	: 	ddMMYYYYtoEpoc,

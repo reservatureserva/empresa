@@ -43,7 +43,7 @@ var modalCondicionesCo = (function() {
 			fecha_cancelacion : 0,
 			oferta 			: 	oferta.id,
 			agencia 		: 	oferta.agencia,
-			cliente			: 	cookies.getJsonFromCookie(utils.userCookieName).id,
+			cliente			: 	cookies.getJsonFromCookie(utils.businessCookieName).id,
 			costo 			: 	oferta.precio_base
 		}
 

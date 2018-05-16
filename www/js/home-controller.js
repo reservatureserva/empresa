@@ -1,7 +1,7 @@
 var homeCo = (function() {
 	var menu = false;
 	var ini = (json)=>{
-		json = json ? json : cookies.getJsonFromCookie(utils.userCookieName);
+		json = json ? json : cookies.getJsonFromCookie(utils.businessCookieName);
 		printNav(json);
 		empresaAction();
 		perfilEvents();

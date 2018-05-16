@@ -242,10 +242,6 @@
               </div>
               <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> 
-                  <input class="mdl-textfield__input" name="name" type="text" id="name-registro"> <label class="mdl-textfield__label" for="name-registro">Nombre</label> 
-                </div>
-
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> 
                   <input class="mdl-textfield__input" name="email" type="email" id="email-registro"> <label class="mdl-textfield__label" for="email-registro">Email</label> 
                 </div>
 
@@ -254,13 +250,16 @@
                   <label class="mdl-textfield__label" for="password">Password</label> 
                 </div>
 
-
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> 
                   <input class="mdl-textfield__input" name="repassword" type="password" id="repassword">
                   <label class="mdl-textfield__label" for="repassword">Repeat Password</label> 
                 </div>
               </div>
               <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> 
+                  <input class="mdl-textfield__input" name="name" type="text" id="name-registro"> <label class="mdl-textfield__label" for="name-registro">Nombre</label> 
+                </div>
+
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> 
                   <input class="mdl-textfield__input" name="cif" type="text" id="cif-registro"> 
                   <label class="mdl-textfield__label" for="cif">CIF</label> 
@@ -436,12 +435,11 @@
                     <input class="mdl-textfield__input" type="email" id="email-perfil" readonly name="email"> 
                     <label class="mdl-textfield__label" for="email-perfil">Email</label>
                   </div>
-                  <div class="js-date mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <input class="mdl-textfield__input" type="text" id="date-perfil" readonly name="fecha"> <label class="mdl-textfield__label" for="date-perfil">Fecha de Nacimiento</label> </div>
                 </div>
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <input class="mdl-textfield__input" type="text" id="cif-perfil" readonly name="cif"> <label class="mdl-textfield__label" for="cif-perfil">cif</label> </div>
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <input class="mdl-textfield__input" type="number" id="tlf-perfil" name="tlfn"> <label class="mdl-textfield__label" for="tlf-registro">Teléfono</label> </div>
-                  <div class="js-date mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <input class="mdl-textfield__input" type="text" id="nreservas" value="3" readonly name="nreservas"> <label class="mdl-textfield__label" for="nreservas">Nº de Reservas</label> </div>
+                  <div class="js-date mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> <input class="mdl-textfield__input" type="text" id="nreservas" readonly name="nreservas"> <label class="mdl-textfield__label" for="nreservas">Nº de Reservas</label> </div>
                 </div>
               </div>
               <hr>
@@ -583,10 +581,10 @@
         </tr>
       </thead>
       <tbody class="js-tablaCalendar">
-        
-     </tbody>
-   </table>
- </div>
+
+      </tbody>
+    </table>
+  </div>
 </form>
 </div>
 
@@ -651,7 +649,7 @@
             <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i> 
             <label for="categoria-oferta" class="mdl-textfield__label">Categoria</label> 
             <ul for="categoria-oferta" class="mdl-menu mdl-menu--bottom-left mdl-js-menu js-categorias">
-           
+
             </ul>
           </div>
         </div>

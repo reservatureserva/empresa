@@ -25,7 +25,7 @@ var businessCo = (function() {
 
   var registro = (user)=>{
     //guardar en cookie 
-    cookies.setJsonInCookie(utils.userCookieName, user);
+    cookies.setJsonInCookie(utils.businessCookieName, user);
     var password = $("form[name='registroFormu'] input[name='password']").val();
 
     firebase.auth().createUserWithEmailAndPassword(user.email, password).catch(function(error) {
@@ -68,7 +68,7 @@ var businessCo = (function() {
 
   var logOut = ()=>{
     firebase.auth().signOut().then(function() {
-      cookies.deleteCookie(utils.userCookieName);
+      cookies.deleteCookie(utils.businessCookieName);
       location.reload();
     }, function(error) {
       alert('Sign Out Error'+ error);
@@ -93,10 +93,12 @@ var businessCo = (function() {
 
   var deleteUser = ()=>{
     firebase.auth().currentUser.delete().then(function() {
-      app.ini();
+      cookies.deleteCookie(businessCookieName);
+      location.reload(); 
     }).catch(function(error) {
       contenido.feedBack("Error al borrar Usuario");
-    });
+      logOut();
+    });   
   }
 
   return{

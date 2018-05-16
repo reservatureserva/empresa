@@ -53,7 +53,7 @@ var contenido = (function() {
 	//muestra el navBar e inserta en js-contenido el contenido
 	var home = (user)=>{
 		console.log("loading home");
-		user = user == undefined ? cookies.getJsonFromCookie(utils.userCookieName) : user;
+		user = user == undefined ? cookies.getJsonFromCookie(utils.businessCookieName) : user;
 		$(".js-contenido").html("");
 		homeCo.ini(user);
 		filtroDialog();
@@ -64,7 +64,7 @@ var contenido = (function() {
 	var backHome = ()=>{
 		console.log("loading home");
 		$(".js-contenido").html("");
-		peticionesAJAX.reservas(cookies.getJsonFromCookie(utils.userCookieName).id, reservaCo.createCard);
+		peticionesAJAX.reservas(cookies.getJsonFromCookie(utils.businessCookieName).id, reservaCo.createCard);
 	};
 
 	//generará y mostrará las reservas actuales recibidas del servidor

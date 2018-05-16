@@ -7,7 +7,7 @@ var app = (function() {
 	var auth = ()=>{
 		var user = firebase.auth().currentUser;
 		if (user) {
-			var cookieUser = cookies.getJsonFromCookie(utils.userCookieName);
+			var cookieUser = cookies.getJsonFromCookie(utils.businessCookieName);
 			if(cookieUser){
 				contenido.home(cookieUser);				
 			}else{

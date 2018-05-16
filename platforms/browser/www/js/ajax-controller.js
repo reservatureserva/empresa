@@ -9,10 +9,11 @@ var peticionesAJAX = (function() {
 		}).done(function(business) {
 			if(business.message){
 				contenido.feedBack(business.message);
-				return;
+				return next();
+			}else{
+				cookies.setJsonInCookie(utils.businessCookieName, business);
+				return next(business);
 			}
-			cookies.setJsonInCookie(utils.businessCookieName, business);
-			return next(business);
 		}).fail(function(error) {
 			contenido.feedBack(JSON.stringify(error));
 		});
@@ -36,7 +37,7 @@ var peticionesAJAX = (function() {
 		});
 	};
 
-	var updatebusiness = (json, callback)=>{
+	var updateBusiness = (json, callback)=>{
 		$.ajax({
 			type: "PUT",
 			dataType: "json",
@@ -46,7 +47,7 @@ var peticionesAJAX = (function() {
 		}).done(function(business) {
 			if(business.message){
 				contenido.feedBack(business.message);
-				return;
+				app.ini();
 			}else{
 				cookies.setJsonInCookie(utils.businessCookieName, business);
 				location.reload();
@@ -90,6 +91,9 @@ var peticionesAJAX = (function() {
 			data: {id: identificador},
 			url: "http://localhost:8000/api/business/booking"
 		}).done(function(jsonArray) {
+			var business = cookies.getJsonFromCookie(utils.businessCookieName);
+			business.nReservas = jsonArray.length;
+			cookies.setJsonInCookie(utils.businessCookieName, business);
 			callback(jsonArray);
 		}).fail(function(error) {
 			contenido.feedBack(JSON.stringify(error));
@@ -183,7 +187,7 @@ var peticionesAJAX = (function() {
 		busqueda		: 		busqueda,
 		reservas		: 		reservas,
 		insertOferta	: 		insertOferta,
-		updatebusiness		: 		updatebusiness,
+		updateBusiness	: 		updateBusiness,
 		createCalendar 	: 		createCalendar,
 		getCategorias 	: 		getCategorias,
 		getAvailable	: 		getAvailable,
