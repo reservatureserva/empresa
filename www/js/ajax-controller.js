@@ -4,7 +4,7 @@ var peticionesAJAX = (function() {
 			type: "POST",
 			dataType: "json",
 			data: {email : email},
-			url: "http://localhost:8000/api/business/profile",
+			url: "http://reservatureserva.ddns.net:8000/api/business/profile",
 			async: false
 		}).done(function(business) {
 			if(business.message){
@@ -24,7 +24,7 @@ var peticionesAJAX = (function() {
 			type: "POST",
 			dataType: "json",
 			data: json,
-			url: "http://localhost:8000/api/business/register",
+			url: "http://reservatureserva.ddns.net:8000/api/business/register",
 			async: false
 		}).done(function(business) {
 			if(business.message){
@@ -42,7 +42,7 @@ var peticionesAJAX = (function() {
 			type: "PUT",
 			dataType: "json",
 			data: json,
-			url: "http://localhost:8000/api/business/update",
+			url: "http://reservatureserva.ddns.net:8000/api/business/update",
 			async: false
 		}).done(function(business) {
 			if(business.message){
@@ -62,7 +62,7 @@ var peticionesAJAX = (function() {
 			type: "DELETE",
 			dataType: "json",
 			data: {id: id},
-			url: "http://localhost:8000/api/business/delete"
+			url: "http://reservatureserva.ddns.net:8000/api/business/delete"
 		}).done(function(id) {
 			callback(id);
 		}).fail(function(error) {
@@ -75,7 +75,7 @@ var peticionesAJAX = (function() {
 			type: "POST",
 			dataType: "json",
 			data: query,
-			url: "http://localhost:8000/api/search"
+			url: "http://reservatureserva.ddns.net:8000/api/search"
 		}).done(function(jsonArray) {
 			cookies.setCookie(utils.lastSearch, JSON.stringify(jsonArray));
 			return callback(jsonArray);
@@ -89,7 +89,7 @@ var peticionesAJAX = (function() {
 			type: "POST",
 			dataType: "json",
 			data: {id: identificador},
-			url: "http://localhost:8000/api/business/booking"
+			url: "http://reservatureserva.ddns.net:8000/api/business/booking"
 		}).done(function(jsonArray) {
 			var business = cookies.getJsonFromCookie(utils.businessCookieName);
 			business.nReservas = jsonArray.length;
@@ -106,7 +106,7 @@ var peticionesAJAX = (function() {
 			type: "POST",
 			dataType: "json",
 			data: json,
-			url: "http://localhost:8000/api/business/availability",
+			url: "http://reservatureserva.ddns.net:8000/api/business/availability",
 			async: false
 		}).done(function(oferta) {
 			return callback(oferta);
@@ -120,7 +120,7 @@ var peticionesAJAX = (function() {
 			type: "POST",
 			dataType: "json",
 			data: booking,
-			url: "http://localhost:8000/api/business/createBooking",
+			url: "http://reservatureserva.ddns.net:8000/api/business/createBooking",
 			async: false
 		}).done(function(ok) {
 			return contenido.home();
@@ -139,7 +139,7 @@ var peticionesAJAX = (function() {
 			type: "POST",
 			dataType: "json",
 			data: json,
-			url: "http://localhost:8000/api/business/createOffer",
+			url: "http://reservatureserva.ddns.net:8000/api/business/createOffer",
 			async: false
 		}).done(function(oferta) {
 			var json = cookies.getJsonFromCookie(utils.calendarTmp);
@@ -157,7 +157,7 @@ var peticionesAJAX = (function() {
 			type: "POST",
 			dataType: "json",
 			data: json,
-			url: "http://localhost:8000/api/business/createCalendar",
+			url: "http://reservatureserva.ddns.net:8000/api/business/createCalendar",
 			async: false
 		}).done(function(oferta) {
 			contenido.feedBack("Oferta creada con exito", true);
@@ -172,7 +172,7 @@ var peticionesAJAX = (function() {
 		$.ajax({
 			type: "GET",
 			dataType: "json",
-			url: "http://localhost:8000/api/categorias"
+			url: "http://reservatureserva.ddns.net:8000/api/categorias"
 		}).done(function(jsonArray) { 
 			utils.cargarCategorias(jsonArray);
 		}).fail(function(error) { 
