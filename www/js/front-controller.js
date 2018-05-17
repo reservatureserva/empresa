@@ -58,13 +58,13 @@ var contenido = (function() {
 		homeCo.ini(user);
 		filtroDialog();
 		peticionesAJAX.getCategorias();
-		peticionesAJAX.reservas(user.id, reservaCo.createCard);
+		peticionesAJAX.reservas(user.cif, reservaCo.createCard);
 	};
 
 	var backHome = ()=>{
 		console.log("loading home");
 		$(".js-contenido").html("");
-		peticionesAJAX.reservas(cookies.getJsonFromCookie(utils.businessCookieName).id, reservaCo.createCard);
+		peticionesAJAX.reservas(cookies.getJsonFromCookie(utils.businessCookieName).cif, reservaCo.createCard);
 	};
 
 	//generará y mostrará las reservas actuales recibidas del servidor
